@@ -49,7 +49,30 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        // Debug defaults to true in dev, false in prod
+        debug: undefined,
+        // Will be passed to @docusaurus/plugin-content-pages (false to disable)
+        pages: {},
+        // Will be passed to @docusaurus/plugin-sitemap (false to disable)
+        sitemap: {},
+        // Will be passed to @docusaurus/plugin-google-gtag (only enabled when explicitly specified)
+        // gtag: {},
+        // Will be passed to @docusaurus/plugin-google-tag-manager (only enabled when explicitly specified)
+        // googleTagManager: {},
+        // DEPRECATED: Will be passed to @docusaurus/plugin-google-analytics (only enabled when explicitly specified)
+        // googleAnalytics: {},
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        'indexPages': true,
+        'hashed': true,
+        'docsRouteBasePath': '/',
+      },
     ],
   ],
 
