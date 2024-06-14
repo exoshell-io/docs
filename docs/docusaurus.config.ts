@@ -3,12 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'ExoShell',
+  tagline: 'Use your computers like never before.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.exoshell.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -34,18 +34,17 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/exoshell-io/docs',
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
+          // showReadingTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/exoshell-io/docs',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -55,25 +54,25 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.png',
     navbar: {
-      title: 'My Site',
+      title: 'ExoShell',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'ExoShell',
+        src: 'img/logo.png',
+        href: 'https://exoshell.io',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/exoshell-io/docs',
+          label: 'Github',
           position: 'right',
         },
       ],
@@ -82,11 +81,20 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Documentation',
               to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Blog',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },
@@ -94,34 +102,55 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/exoshell',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Slack',
+              href: 'https://slack.com/invite/exoshell',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/exoshell',
+            },
+            {
+              label: 'Youtube',
+              href: 'https://youtube.com/exoshell',
+            },
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/exoshell',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'ExoShell',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'ExoShell',
+              href: 'https://exoshell.io',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/exoshell-io/exoshell',
+            },
+            {
+              label: 'License',
+              href: 'https://github.com/exoshell-io/exoshell/LICENSE.txt',
+            },
+          ],
+        },
+        {
+          title: 'ExoHub',
+          items: [
+            {
+              label: 'ExoHub',
+              href: 'https://exohub.io',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ExoShell`,
     },
     prism: {
       theme: prismThemes.github,

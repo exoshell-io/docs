@@ -1,0 +1,8 @@
+exoshell:
+  label: ExoShell
+  permalink: /exoshell
+  description: ExoShell tag description
+hello:
+  label: Intro
+  permalink: /hello
+  description: Hello tag description
